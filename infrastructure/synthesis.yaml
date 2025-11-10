@@ -1,0 +1,14 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: synthesis-service
+spec:
+  template:
+    spec:
+      containers:
+        - image: us-docker.pkg.dev/PROJECT_ID/auditai/synthesis:latest
+          env:
+            - name: PROJECT_ID
+              value: PROJECT_ID
+      serviceAccountName: svc-synthesis@PROJECT_ID.iam.gserviceaccount.com
+

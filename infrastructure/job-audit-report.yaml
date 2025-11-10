@@ -1,0 +1,18 @@
+apiVersion: run.googleapis.com/v1
+kind: Job
+metadata:
+  name: audit-report-job
+spec:
+  template:
+    template:
+      containers:
+        - image: us-docker.pkg.dev/PROJECT_ID/auditai/job:latest
+          env:
+            - name: PROJECT_ID
+              value: PROJECT_ID
+            - name: REGION
+              value: us-central1
+            - name: REPORT_BUCKET
+              value: PROJECT_ID-auditai-reports
+      serviceAccountName: svc-job@PROJECT_ID.iam.gserviceaccount.com
+

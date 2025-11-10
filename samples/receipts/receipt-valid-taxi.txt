@@ -1,0 +1,27 @@
+UBER RECEIPT
+
+Trip Details:
+Date: November 5, 2025
+Time: 9:15 AM - 9:42 AM
+
+From: San Francisco Airport (SFO)
+To: 123 Market St, San Francisco, CA 94102
+
+Driver: John D.
+Vehicle: Toyota Prius
+
+Fare Breakdown:
+Base Fare: $8.50
+Distance (12.3 mi): $18.75
+Time (27 min): $6.25
+------------------
+Subtotal: $33.50
+Tip (18%): $6.03
+------------------
+Total: $39.53
+
+Payment Method: Visa ****1234
+Transaction ID: UBER-2025-11-05-92847
+
+Business Purpose: Airport pickup for client meeting
+

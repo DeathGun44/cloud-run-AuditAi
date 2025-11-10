@@ -1,0 +1,33 @@
+apiVersion: run.googleapis.com/v1
+kind: WorkerPool
+metadata:
+  name: anomaly-agent
+spec:
+  template:
+    template:
+      containers:
+        - image: us-central1-docker.pkg.dev/PROJECT_ID/auditai/worker:latest
+          env:
+            - name: PROJECT_ID
+              value: PROJECT_ID
+            - name: REGION
+              value: us-central1
+            - name: MODEL_LOCATION
+              value: global
+            - name: AGENT_TYPE
+              value: anomaly
+            - name: SUBSCRIPTION
+              value: expenses.evaluated.anomaly
+            - name: TOPIC_OUT
+              value: expenses.analyzed
+            - name: AGENT_QPS
+              value: "2"
+            - name: MAX_INFLIGHT_MESSAGES
+              value: "2"
+            - name: MAX_INFLIGHT_BYTES
+              value: "2097152"
+  scaling:
+    maxInstances: 10
+  topics:
+    - name: expenses.evaluated
+

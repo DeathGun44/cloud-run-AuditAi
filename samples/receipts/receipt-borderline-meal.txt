@@ -1,0 +1,30 @@
+STARBUCKS RECEIPT
+
+Store #4582
+456 Market Street
+San Francisco, CA 94103
+
+Date: November 6, 2025
+Time: 2:47 PM
+
+Order #7821
+
+Items:
+1 Grande Latte              $5.45
+1 Venti Cappuccino          $5.95
+2 Chocolate Croissant       $7.90
+1 Banana Loaf               $4.25
+------------------
+Subtotal:                  $23.55
+Tax (8.5%):                 $2.00
+------------------
+Total:                     $25.55
+
+Payment: Visa ****5678
+Transaction: AUTH#928471
+
+Thank you for your visit!
+
+Note: Purchased during afternoon team brainstorming session
+Attendees: Sarah (PM), Mike (Eng)
+

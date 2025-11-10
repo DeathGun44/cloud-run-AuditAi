@@ -1,0 +1,23 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: orchestrator-api
+spec:
+  template:
+    metadata:
+      annotations:
+        run.googleapis.com/cloudsql-instances: ""
+    spec:
+      containers:
+        - image: us-docker.pkg.dev/PROJECT_ID/auditai/orchestrator:latest
+          env:
+            - name: PROJECT_ID
+              value: PROJECT_ID
+            - name: REGION
+              value: us-central1
+            - name: RECEIPTS_BUCKET
+              value: PROJECT_ID-auditai-receipts
+            - name: TOPIC_INGESTED
+              value: expenses.ingested
+      serviceAccountName: svc-orchestrator@PROJECT_ID.iam.gserviceaccount.com
+

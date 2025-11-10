@@ -1,0 +1,39 @@
+apiVersion: run.googleapis.com/v1
+kind: WorkerPool
+metadata:
+  name: policy-agent
+spec:
+  template:
+    template:
+      containers:
+        - image: us-central1-docker.pkg.dev/PROJECT_ID/auditai/worker:latest
+          env:
+            - name: PROJECT_ID
+              value: PROJECT_ID
+            - name: REGION
+              value: us-central1
+            - name: MODEL_LOCATION
+              value: global
+            - name: POLICY_MODEL_LOCATION
+              value: global
+            - name: AGENT_TYPE
+              value: policy
+            - name: SUBSCRIPTION
+              value: expenses.extracted.policy
+            - name: TOPIC_OUT
+              value: expenses.evaluated
+            - name: POLICY_BUCKET
+              value: PROJECT_ID-auditai-policies
+            - name: POLICY_MODEL
+              value: gemini-2.5-flash-lite-preview-09-2025
+            - name: AGENT_QPS
+              value: "2"
+            - name: MAX_INFLIGHT_MESSAGES
+              value: "2"
+            - name: MAX_INFLIGHT_BYTES
+              value: "2097152"
+  scaling:
+    maxInstances: 10
+  topics:
+    - name: expenses.extracted
+

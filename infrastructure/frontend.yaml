@@ -1,0 +1,17 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  template:
+    spec:
+      containers:
+        - image: us-docker.pkg.dev/PROJECT_ID/auditai/frontend:latest
+          env:
+            - name: NEXT_PUBLIC_API_BASE_URL
+              value: https://orchestrator-api-XXXXX-uc.a.run.app
+      serviceAccountName: svc-frontend@PROJECT_ID.iam.gserviceaccount.com
+  traffic:
+    - percent: 100
+      latestRevision: true
+
