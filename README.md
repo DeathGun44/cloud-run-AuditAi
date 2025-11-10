@@ -57,7 +57,7 @@ Finance teams waste 10-15 hours/week manually reviewing expense reports. Each au
 ┌──────────────────┐                                  │
 │ Extraction Worker│ ◄────┐                           │
 │ (Worker Pool)    │      │                           ▼
-│ Gemini Vision    │      │                    ┌─────────────┐
+│ Gemini FLASH     │      │                    ┌─────────────┐
 └────┬─────────────┘      │ Pub/Sub Topics     │  Firestore  │
      │                    │                    │  (Real-time │
      │ expenses.extracted │                    │   Updates)  │
@@ -65,7 +65,7 @@ Finance teams waste 10-15 hours/week manually reviewing expense reports. Each au
 ┌──────────────────┐      │
 │ Policy Worker    │ ◄────┤
 │ (Worker Pool)    │      │
-│ ADK + Gemini Pro │      │
+│ ADK+ Gemini Lite │      │
 └────┬─────────────┘      │
      │                    │
      │ expenses.evaluated │
