@@ -403,23 +403,6 @@ Update each Worker Pool image to: `us-central1-docker.pkg.dev/smiling-memory-477
 
 ---
 
-## 📝 **Next Actions (For Max Score)**
-
-### Immediate (10 min) - +0.8 bonus points
-1. **Publish blog post** (+0.4)
-   - Use `docs/BLOG_POST_DRAFT.md`
-   - Add screenshots
-   - Publish on Medium/Dev.to
-   - Include #CloudRunHackathon
-
-2. **Post on social media** (+0.4)
-   - Use templates from `docs/SOCIAL_MEDIA_POSTS.md`
-   - LinkedIn or X/Twitter
-   - Include demo link + #CloudRunHackathon
-
-
----
-
 ## 🏅 **Highlights for Judges**
 
 - ✅ **Innovation**: Multi-modal (vision + text), multi-agent, real-world ROI
@@ -435,7 +418,7 @@ Update each Worker Pool image to: `us-central1-docker.pkg.dev/smiling-memory-477
 
 - **Live Demo**: https://frontend-ybesjcwrcq-uc.a.run.app
 - **API Docs**: https://orchestrator-api-ybesjcwrcq-uc.a.run.app/docs
-- **GitHub**: [Your repo URL]
+- **Email**: Krishnamewara841@gmail.com
 
 ---
 
